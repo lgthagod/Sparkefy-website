@@ -26,7 +26,11 @@ sparkefy-website/
 ├── support.html        # Support + contact (App Store Support URL)
 ├── README.md
 ├── assets/
-│   └── logo.svg
+│   ├── logo.png              # Official App Icon (1024px, source of truth)
+│   ├── logo-180.png
+│   ├── apple-touch-icon.png
+│   ├── favicon.png
+│   └── logo.svg              # Stylized SVG fallback (approx)
 └── .well-known/
     └── apple-app-site-association.json
 ```
