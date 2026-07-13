@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparkefy • On-Demand Home Services — Book Local Pros</title>
+  <meta name="description" content="Book trusted local pros for detailing, lawn care, pressure washing, home cleaning, and exterior maintenance. Transparent estimates, Stripe payments, live tracking. Download on the App Store.">
+  <meta name="keywords" content="home services, car detailing, lawn care, pressure washing, home cleaning, gutter cleaning, book local pros, Sparkefy">
+  <meta name="author" content="Sparkefy">
+  <meta name="theme-color" content="#0F766E">
+  <link rel="canonical" href="https://sparkefy.app/">
+  <meta property="og:title" content="Sparkefy • On-Demand Home Services">
+  <meta property="og:description" content="Find and book trusted local pros for your home in minutes. Transparent pricing, secure payments, live tracking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sparkefy.app/">
+  <meta property="og:image" content="https://sparkefy.app/assets/logo.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sparkefy • On-Demand Home Services">
+  <meta name="twitter:description" content="Book trusted local pros for detailing, lawn care, pressure washing, cleaning & more.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0F766E',
+              50: '#F0FDFA',
+              100: '#CCFBF1',
+              200: '#99F6E4',
+              600: '#0D9488',
+              700: '#0F766E',
+              800: '#115E59',
+              900: '#134E4A',
+            },
+            accent: {
+              DEFAULT: '#F59E0B',
+              50: '#FFFBEB',
+              600: '#D97706',
+              700: '#B45309',
+            },
+          },
+          boxShadow: {
+            soft: '0 10px 40px -12px rgba(15, 118, 110, 0.25)',
+            card: '0 4px 24px -4px rgba(15, 23, 42, 0.08)',
+            cta: '0 8px 24px -4px rgba(245, 158, 11, 0.45)',
+          },
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    [id] { scroll-margin-top: 5.5rem; }
+    .phone-frame {
+      width: 260px;
+      height: 530px;
+      background: #0f172a;
+      border-radius: 44px;
+      padding: 10px 8px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.45), 0 0 0 1px #1e2937, inset 0 1px 0 rgba(255,255,255,0.06);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 26px;
+      background: #020617;
+      border-radius: 9999px;
+      z-index: 20;
+    }
+    .phone-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: #475569;
+      border-radius: 4px;
+      z-index: 20;
+      opacity: 0.55;
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: #f8fafc;
+      border-radius: 36px;
+      overflow: hidden;
+      position: relative;
+      font-family: -apple-system, system-ui, sans-serif;
+    }
+    .dark .phone-screen { background: #0f172a; color: #e2e8f0; }
+    @media (max-width: 640px) {
+      .phone-frame { width: 220px; height: 450px; border-radius: 38px; }
+      .phone-screen { border-radius: 30px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 0.7s ease-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-300 font-sans antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+      <div class="flex h-16 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5 shrink-0 group" aria-label="Sparkefy home">
+          <img src="assets/logo.svg" alt="" width="36" height="36" class="w-9 h-9 transition group-hover:scale-105">
+          <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Sparkefy</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <a href="#top" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Home</a>
+          <a href="#services" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Services</a>
+          <a href="#how-it-works" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">How it Works</a>
+          <a href="#testimonials" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Testimonials</a>
+          <a href="#faqs" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">FAQs</a>
+          <a href="support.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Support</a>
+          <a href="privacy.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Privacy</a>
+          <a href="terms.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Terms</a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button type="button" id="theme-toggle" class="p-2.5 rounded-xl text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-label="Toggle dark mode">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg>
+            <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+          </button>
+          <!-- TODO: Replace with real App Store URL after approval -->
+          <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-accent hover:bg-accent-600 text-white text-sm font-semibold px-4 py-2.5 shadow-cta transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
+            Download
+          </a>
+          <button type="button" id="menu-btn" class="lg:hidden p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-slate-100 dark:border-slate-800 pt-3 space-y-1">
+        <a href="#top" class="mobile-nav-link block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Home</a>
+        <a href="#services" class="mobile-nav-link block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Services</a>
+        <a href="#how-it-works" class="mobile-nav-link block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">How it Works</a>
+        <a href="#testimonials" class="mobile-nav-link block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Testimonials</a>
+        <a href="#faqs" class="mobile-nav-link block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">FAQs</a>
+        <a href="support.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Support</a>
+        <a href="privacy.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Privacy</a>
+        <a href="terms.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Terms</a>
+        <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="block mt-2 text-center rounded-xl bg-accent hover:bg-accent-600 text-white font-semibold px-4 py-3 shadow-cta transition">Download on the App Store</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="top" class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
+      <div class="absolute inset-0 pointer-events-none opacity-40 dark:opacity-20" aria-hidden="true">
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-200 blur-3xl"></div>
+        <div class="absolute top-1/2 -left-20 w-72 h-72 rounded-full bg-accent-50 blur-3xl"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="fade-in">
+            <p class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-700 dark:text-brand-200 mb-4">
+              <span class="w-2 h-2 rounded-full bg-accent"></span>
+              On-demand home services
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+              Trusted local pros for your home — booked in minutes.
+            </h1>
+            <p class="mt-5 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+              Book professional detailing, lawn care, pressure washing, home cleaning, and exterior maintenance. Clear estimates, secure Stripe checkout, and live tracking when your pro is on the job.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
+              <!-- Official-style App Store badge -->
+              <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-black hover:bg-slate-900 text-white rounded-xl px-5 py-3.5 shadow-soft transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2" aria-label="Download on the App Store">
+                <svg class="w-8 h-8 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span class="text-left leading-tight">
+                  <span class="block text-[10px] uppercase tracking-wide opacity-90">Download on the</span>
+                  <span class="block text-lg font-semibold -mt-0.5">App Store</span>
+                </span>
+              </a>
+              <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand text-brand-800 dark:text-brand-200 dark:border-brand-600 font-semibold px-5 py-3.5 hover:bg-brand-50 dark:hover:bg-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+                Learn how it works
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"/></svg>
+              </a>
+            </div>
+            <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+              <li class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg> Stripe payments</li>
+              <li class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg> Live tracking</li>
+              <li class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg> Dual-role: book or earn</li>
+            </ul>
+          </div>
+
+          <!-- iPhone mockup -->
+          <div class="flex justify-center lg:justify-end fade-in" style="animation-delay: 0.15s">
+            <div class="phone-frame" aria-hidden="true">
+              <div class="phone-screen">
+                <div class="px-3 pt-10 pb-2">
+                  <div class="flex justify-between items-center text-[10px] text-slate-400 mb-3 px-1">
+                    <span class="font-semibold text-slate-700 dark:text-slate-200">9:41</span>
+                    <span>●●●</span>
+                  </div>
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="w-7 h-7 rounded-lg bg-brand flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3L13.8 8.4L19.5 9.3L15 13.5L16.2 19.5L12 16.5L7.8 19.5L9 13.5L4.5 9.3L10.2 8.4L12 3Z" fill="#F59E0B"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-xs font-bold text-slate-900 dark:text-white">Sparkefy</div>
+                      <div class="text-[9px] text-slate-500">Near 33101</div>
+                    </div>
+                  </div>
+                  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-[10px] text-slate-500 mb-3 shadow-sm">Search services or pros…</div>
+                  <div class="flex flex-wrap gap-1.5 mb-3">
+                    <span class="px-2 py-1 rounded-full bg-brand text-white text-[9px] font-medium">Detailing</span>
+                    <span class="px-2 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-800 dark:text-brand-200 text-[9px] font-medium border border-brand-100 dark:border-slate-700">Lawn</span>
+                    <span class="px-2 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-800 dark:text-brand-200 text-[9px] font-medium border border-brand-100 dark:border-slate-700">Wash</span>
+                    <span class="px-2 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-800 dark:text-brand-200 text-[9px] font-medium border border-brand-100 dark:border-slate-700">Clean</span>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl p-2.5 shadow-sm">
+                      <div class="flex gap-2">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-200 to-brand-600 shrink-0"></div>
+                        <div class="min-w-0">
+                          <div class="text-[11px] font-semibold text-slate-900 dark:text-white truncate">Apex Auto Detail</div>
+                          <div class="text-[9px] text-slate-500">Interior + exterior · from $89</div>
+                          <div class="text-[9px] text-accent-600 font-medium mt-0.5">★ 4.9 · 2.1 mi</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl p-2.5 shadow-sm">
+                      <div class="flex gap-2">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-200 to-brand-700 shrink-0"></div>
+                        <div class="min-w-0">
+                          <div class="text-[11px] font-semibold text-slate-900 dark:text-white truncate">GreenLine Lawns</div>
+                          <div class="text-[9px] text-slate-500">Mow + edge · from $45</div>
+                          <div class="text-[9px] text-accent-600 font-medium mt-0.5">★ 4.8 · 1.4 mi</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl p-2.5 shadow-sm">
+                      <div class="flex gap-2">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-200 to-brand-800 shrink-0"></div>
+                        <div class="min-w-0">
+                          <div class="text-[11px] font-semibold text-slate-900 dark:text-white truncate">PureWash Pros</div>
+                          <div class="text-[9px] text-slate-500">Driveway wash · from $120</div>
+                          <div class="text-[9px] text-accent-600 font-medium mt-0.5">★ 5.0 · 3.0 mi</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="absolute bottom-5 left-3 right-3">
+                    <div class="bg-brand text-white text-center text-[10px] font-semibold py-2.5 rounded-xl shadow-soft">Book this pro</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand mb-2">Services</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Everything your home needs, one app</h2>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Browse verified local providers across the services homeowners book most — with more categories as pros join your area.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article class="group rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-card hover:shadow-soft hover:-translate-y-1 transition duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Professional Detailing</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Interior and exterior car and boat detailing from local pros who show their work in-app before you book.</p>
+          </article>
+          <!-- Card 2 -->
+          <article class="group rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-card hover:shadow-soft hover:-translate-y-1 transition duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6c0-1.828-.833-3.47-2.141-4.546C14.82 7.239 13.5 6 12 6s-2.82 1.239-3.859 2.204C6.833 9.28 6 10.922 6 12.75a6 6 0 0 0 6 6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V3.75M8.25 7.5 6.75 6M15.75 7.5l1.5-1.5M4.5 12.75H3M21 12.75h-1.5"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Lawn Care &amp; Landscaping</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Mowing, edging, seasonal lawn care, and curb-appeal upkeep scheduled around your week.</p>
+          </article>
+          <!-- Card 3 -->
+          <article class="group rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-card hover:shadow-soft hover:-translate-y-1 transition duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Pressure Washing</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Driveways, siding, decks, and hardscapes restored — book with transparent price estimates upfront.</p>
+          </article>
+          <!-- Card 4 -->
+          <article class="group rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-card hover:shadow-soft hover:-translate-y-1 transition duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Home Cleaning</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Standard and deep cleans from local cleaners — one-time or recurring when you need consistency.</p>
+          </article>
+          <!-- Card 5 -->
+          <article class="group rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-card hover:shadow-soft hover:-translate-y-1 transition duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Gutter &amp; Exterior Maintenance</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Gutters, exterior touch-ups, and seasonal outside care to keep your property ready year-round.</p>
+          </article>
+          <!-- Card 6 -->
+          <article class="group rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-card hover:shadow-soft hover:-translate-y-1 transition duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">More Local Services</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Categories expand as providers join your ZIP. Discover new pros and specialties right in the app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand mb-2">How it works</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">From search to service in four steps</h2>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Whether you need a one-time detail or recurring lawn care, Sparkefy keeps booking simple and transparent.</p>
+        </div>
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <li class="relative rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 shadow-card">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-brand text-white font-bold text-sm mb-4">1</span>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Browse by ZIP</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Discover local pros and services near you. Filter by category and compare showcases and estimates.</p>
+          </li>
+          <li class="relative rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 shadow-card">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-brand text-white font-bold text-sm mb-4">2</span>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Get clear estimates</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">See transparent pricing before you commit. No surprises at checkout — the platform fee is shown in your summary.</p>
+          </li>
+          <li class="relative rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 shadow-card">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-brand text-white font-bold text-sm mb-4">3</span>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Book &amp; pay securely</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Checkout with Stripe. A 20% platform fee applies to the service base; optional tips go 100% to your pro.</p>
+          </li>
+          <li class="relative rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 shadow-card">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-brand text-white font-bold text-sm mb-4">4</span>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Track &amp; review</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Live tracking on supported jobs, cancel from Bookings when needed, and tip after a job well done.</p>
+          </li>
+        </ol>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-6">
+          <div class="rounded-3xl border border-brand-100 dark:border-brand-900 bg-brand-50/80 dark:bg-brand-900/20 p-6 sm:p-8">
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white">For customers</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Book within a 30-day window, pay securely, track jobs, and manage cancellations from Bookings or Live Tracking. Your pro only sees the details they need for the job.</p>
+          </div>
+          <div class="rounded-3xl border border-accent-50 dark:border-amber-900/40 bg-accent-50/60 dark:bg-amber-950/20 p-6 sm:p-8">
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white">For providers</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">Become a service provider in Profile, build a showcase with photos and pricing, manage your schedule, and earn after the 20% platform fee — tips are yours in full.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-12">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand mb-2">Testimonials</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">What people love about Sparkefy</h2>
+          <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Illustrative customer and provider feedback for the marketplace experience — not App Store review excerpts.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 sm:p-7 shadow-card">
+            <div class="flex gap-0.5 text-accent mb-4" aria-hidden="true">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">“Booked a driveway wash in under five minutes. The estimate was clear, payment was smooth, and I could see when the pro was on the way.”</p>
+            <footer class="mt-5 text-sm font-semibold text-slate-900 dark:text-white">Alex M. <span class="font-normal text-slate-500">· Homeowner</span></footer>
+          </blockquote>
+          <blockquote class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 sm:p-7 shadow-card">
+            <div class="flex gap-0.5 text-accent mb-4" aria-hidden="true">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">“As a detailer, the showcase and pricing tools help me look professional. Earnings after the platform fee are easy to understand.”</p>
+            <footer class="mt-5 text-sm font-semibold text-slate-900 dark:text-white">Jordan R. <span class="font-normal text-slate-500">· Provider</span></footer>
+          </blockquote>
+          <blockquote class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-6 sm:p-7 shadow-card">
+            <div class="flex gap-0.5 text-accent mb-4" aria-hidden="true">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">“We use Sparkefy for lawn care and occasional deep cleans. Recurring options and transparent fees make planning simple.”</p>
+            <footer class="mt-5 text-sm font-semibold text-slate-900 dark:text-white">Sam &amp; Taylor K. <span class="font-normal text-slate-500">· Homeowners</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950/50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand mb-2">FAQs</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Common questions</h2>
+        </div>
+        <div class="space-y-3">
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              How do I book a service?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">Open the app, set or confirm your ZIP, browse services or provider showcases, pick a time within the 30-day booking window, and complete checkout with Stripe. You’ll see the service estimate and platform fee before you pay.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              How do payments and the 20% platform fee work?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">Payments are processed by Stripe. Sparkefy charges a 20% platform fee on the service base price (shown in the booking summary). Optional tips after a completed job go 100% to the provider. Sparkefy does not store your full card number.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              How do I cancel a booking or get a refund?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">Open <strong>Bookings</strong>, tap your booking, and choose <strong>Cancel this booking</strong>. You can also cancel from Live Tracking when available. Paid bookings are refunded automatically when possible through Stripe. For issues, email <a href="mailto:sparkefysupport@gmail.com" class="text-brand font-medium hover:underline">sparkefysupport@gmail.com</a>.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              What is the 30-day booking window?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">New bookings are limited to a 30-day window so schedules stay accurate and providers can plan reliably. Choose a service date within that window when you check out.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              How does live tracking work?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">On supported jobs, enable location for the app. Live tracking uses MapKit so you can follow progress while a job is active. Tracking is available within the booking window for eligible jobs.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              How do I become a provider?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">In Profile, choose <strong>Become a Service Provider</strong>, then use <strong>Edit My Showcase &amp; Pricing</strong> to add cover photos, work samples, and price estimates. You keep 80% of the service base after the platform fee, plus 100% of tips.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              Is my payment information safe?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">Yes. Card payments are handled by Stripe, a PCI-compliant processor. Sparkefy does not store full card details on our servers. See our <a href="privacy.html" class="text-brand font-medium hover:underline">Privacy Policy</a> for how we handle personal data.</div>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 open:shadow-card transition">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-2xl">
+              How do I contact support?
+              <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-slate-600 dark:text-slate-400 leading-relaxed">Email <a href="mailto:sparkefysupport@gmail.com" class="text-brand font-medium hover:underline">sparkefysupport@gmail.com</a> or visit our <a href="support.html" class="text-brand font-medium hover:underline">Support page</a>. Include your username or booking ID (and for technical issues, bundle ID <code class="text-xs bg-slate-100 dark:bg-slate-700 px-1 rounded">com.logangale.V3Sparkefy</code>). We usually reply within 24 hours.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 sm:py-20 bg-brand dark:bg-brand-900">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Ready to book your next home service?</h2>
+        <p class="mt-4 text-lg text-brand-100 max-w-2xl mx-auto">Download Sparkefy on the App Store. Book local pros, pay securely, and track the job — or earn as a provider in your community.</p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-black hover:bg-slate-900 text-white rounded-xl px-5 py-3.5 shadow-lg transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Download on the App Store">
+            <svg class="w-8 h-8 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span class="text-left leading-tight">
+              <span class="block text-[10px] uppercase tracking-wide opacity-90">Download on the</span>
+              <span class="block text-lg font-semibold -mt-0.5">App Store</span>
+            </span>
+          </a>
+          <a href="support.html" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 border border-white/30 transition">Get support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-flex items-center gap-2.5 text-white font-bold text-lg">
+            <img src="assets/logo.svg" alt="" width="32" height="32" class="w-8 h-8 brightness-110">
+            Sparkefy
+          </a>
+          <p class="mt-3 text-sm leading-relaxed">On-demand home services marketplace. Book trusted local pros — or earn as one — from your iPhone.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Product</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-brand-200 transition">Services</a></li>
+            <li><a href="#how-it-works" class="hover:text-brand-200 transition">How it Works</a></li>
+            <li><a href="#faqs" class="hover:text-brand-200 transition">FAQs</a></li>
+            <li><a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="hover:text-brand-200 transition">App Store</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Legal</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy.html" class="hover:text-brand-200 transition">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-brand-200 transition">Terms of Service</a></li>
+            <li><a href="support.html" class="hover:text-brand-200 transition">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Contact</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:sparkefysupport@gmail.com" class="hover:text-brand-200 transition">sparkefysupport@gmail.com</a></li>
+            <li class="text-slate-500">Replies usually within 24 hours</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-500">
+        <p>© 2026 Sparkefy. All rights reserved.</p>
+        <p>Marketing site for <span class="text-slate-400">sparkefy.app</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function () {
+          var open = menu.classList.toggle('hidden') === false;
+          menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        menu.querySelectorAll('.mobile-nav-link, a[href^="support"], a[href^="privacy"], a[href^="terms"]').forEach(function (link) {
+          link.addEventListener('click', function () {
+            menu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.setAttribute('aria-label', 'Open menu');
+          });
+        });
+      }
+
+      var themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          var root = document.documentElement;
+          var dark = root.classList.toggle('dark');
+          try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

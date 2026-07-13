@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy • Sparkefy</title>
+  <meta name="description" content="Sparkefy Privacy Policy — how we collect, use, and protect your information when you use our iOS app and website at sparkefy.app.">
+  <meta name="theme-color" content="#0F766E">
+  <link rel="canonical" href="https://sparkefy.app/privacy.html">
+  <meta property="og:title" content="Sparkefy Privacy Policy">
+  <meta property="og:url" content="https://sparkefy.app/privacy.html">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#0F766E', 50: '#F0FDFA', 100: '#CCFBF1', 200: '#99F6E4', 600: '#0D9488', 700: '#0F766E', 800: '#115E59', 900: '#134E4A' },
+            accent: { DEFAULT: '#F59E0B', 50: '#FFFBEB', 600: '#D97706', 700: '#B45309' },
+          },
+          boxShadow: {
+            soft: '0 10px 40px -12px rgba(15, 118, 110, 0.25)',
+            card: '0 4px 24px -4px rgba(15, 23, 42, 0.08)',
+            cta: '0 8px 24px -4px rgba(245, 158, 11, 0.45)',
+          },
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .prose-legal h2 { scroll-margin-top: 5.5rem; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-300 font-sans antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+      <div class="flex h-16 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5 shrink-0" aria-label="Sparkefy home">
+          <img src="assets/logo.svg" alt="" width="36" height="36" class="w-9 h-9">
+          <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Sparkefy</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Home</a>
+          <a href="index.html#services" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Services</a>
+          <a href="index.html#how-it-works" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">How it Works</a>
+          <a href="index.html#faqs" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">FAQs</a>
+          <a href="support.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Support</a>
+          <a href="privacy.html" class="px-3 py-2 rounded-lg text-brand font-semibold bg-brand-50 dark:bg-slate-800 dark:text-brand-200" aria-current="page">Privacy</a>
+          <a href="terms.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Terms</a>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button type="button" id="theme-toggle" class="p-2.5 rounded-xl text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-label="Toggle dark mode">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg>
+            <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+          </button>
+          <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center rounded-xl bg-accent hover:bg-accent-600 text-white text-sm font-semibold px-4 py-2.5 shadow-cta transition">Download</a>
+          <button type="button" id="menu-btn" class="lg:hidden p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-slate-100 dark:border-slate-800 pt-3 space-y-1">
+        <a href="index.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Home</a>
+        <a href="support.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Support</a>
+        <a href="privacy.html" class="block px-3 py-3 rounded-lg font-medium text-brand bg-brand-50 dark:bg-slate-800 dark:text-brand-200" aria-current="page">Privacy</a>
+        <a href="terms.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Terms</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-900 border-b border-slate-100 dark:border-slate-800">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <nav class="text-sm text-slate-500 mb-4" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2">
+            <li><a href="index.html" class="hover:text-brand transition">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-slate-900 dark:text-white font-medium">Privacy Policy</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Privacy Policy</h1>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Last updated: July 13, 2026</p>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">This Privacy Policy explains how Sparkefy (“Sparkefy,” “we,” “us,” or “our”) collects, uses, shares, and protects information when you use the Sparkefy iOS application and the website at <a href="https://sparkefy.app/" class="text-brand hover:underline">sparkefy.app</a>.</p>
+      </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 prose-legal">
+      <div class="space-y-10 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">1. Introduction</h2>
+          <p>Sparkefy is an on-demand marketplace that connects customers with independent local service providers for home and property services (including detailing, lawn care, pressure washing, home cleaning, gutter and exterior maintenance, and related categories). This policy applies to the Sparkefy mobile app and marketing/support website. By using Sparkefy, you agree to the practices described here. If you do not agree, please do not use the service. For questions, contact <a href="mailto:sparkefysupport@gmail.com" class="text-brand font-medium hover:underline">sparkefysupport@gmail.com</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">2. Information we collect</h2>
+          <p class="mb-3">We collect information you provide and information generated when you use the app:</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong class="text-slate-800 dark:text-slate-200">Account and profile data:</strong> name, email address and/or phone number, profile details you choose to add, ZIP code, and service address information needed for bookings.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Authentication data:</strong> when you sign in with Apple or phone authentication, we receive identifiers and related account fields permitted by those providers.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Location:</strong> with your permission, approximate or precise location for matching providers, displaying nearby services, and live tracking during supported jobs (via MapKit and related system services).</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Media:</strong> photos you or a provider upload for jobs, work samples, or provider showcases.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Booking and transaction metadata:</strong> service type, schedule, estimates, fees, tips, status, and related history. We do <em>not</em> store full payment card numbers; Stripe processes card payments.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Communications:</strong> messages or details you send to support (for example booking ID, device info you choose to include).</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Device and usage data:</strong> basic technical information needed to operate the app (such as app version and crash/diagnostic data provided by Apple platforms). We do not sell personal data. We limit collection to what is needed to run and improve Sparkefy and to provide support.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">3. How we use information</h2>
+          <p class="mb-3">We use information to:</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Create and manage accounts (customer and provider roles)</li>
+            <li>Match customers with providers, display estimates, and fulfill bookings</li>
+            <li>Facilitate payments and platform fees through Stripe</li>
+            <li>Enable live tracking on supported jobs</li>
+            <li>Host provider showcases and job-related photos</li>
+            <li>Provide customer support and respond to requests</li>
+            <li>Protect safety, prevent fraud and abuse, and enforce our Terms</li>
+            <li>Improve product reliability and user experience</li>
+            <li>Comply with law and respond to lawful requests</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">4. How we share information</h2>
+          <p class="mb-3">We share information only as needed to operate the marketplace:</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong class="text-slate-800 dark:text-slate-200">Service providers (pros):</strong> assigned providers receive customer details required to perform the job (such as name, contact info, service address, and job notes). They do not receive your full payment card data.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Customers:</strong> when you book a pro, you may see provider profile, showcase, and job status information.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Payment processor:</strong> Stripe processes payments and related fraud prevention. Their use of data is governed by Stripe’s policies.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Infrastructure processors:</strong> we use backend services (including cloud database, authentication, and storage providers such as Supabase) to host accounts, bookings, and media securely.</li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Legal and safety:</strong> we may disclose information if required by law, regulation, legal process, or to protect rights, safety, and integrity of users and Sparkefy.</li>
+          </ul>
+          <p class="mt-3"><strong class="text-slate-800 dark:text-slate-200">We do not sell your personal information</strong> and we do not share it for cross-context behavioral advertising.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">5. Payments</h2>
+          <p>Checkout is handled by Stripe. Sparkefy does not store full card numbers on our servers. A 20% platform fee on the service base price is shown in the booking summary; optional tips after a completed job go entirely to the provider. Transaction records necessary for accounting, support, and dispute handling may be retained as described in Section 6.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">6. Data retention</h2>
+          <p>We retain personal information for as long as your account is active and as needed to provide the service, resolve disputes, enforce agreements, and meet legal, tax, and accounting obligations. When you request deletion, we will delete or anonymize personal data within a reasonable period (we aim to complete requests within 30 days), except where we must retain certain records by law or for legitimate safety/fraud prevention purposes.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">7. Your rights and choices</h2>
+          <p class="mb-3">Depending on where you live, you may have rights to:</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Access the personal information we hold about you</li>
+            <li>Correct inaccurate information</li>
+            <li>Request deletion of your account and personal data</li>
+            <li>Object to or restrict certain processing</li>
+            <li>Withdraw consent where processing is based on consent (for example, location permission via iOS Settings)</li>
+          </ul>
+          <p class="mt-3">To exercise these rights, email <a href="mailto:sparkefysupport@gmail.com" class="text-brand font-medium hover:underline">sparkefysupport@gmail.com</a>. We will verify your request and respond as required by applicable law, typically within 30 days. You can also control location and notification permissions in iOS Settings.</p>
+          <p class="mt-3">If you are a California resident, you may have additional rights under the CCPA/CPRA (including rights to know, delete, and correct). We do not sell or share personal information as those terms are defined for advertising purposes. Residents of the EEA/UK may have GDPR rights including data portability and the right to lodge a complaint with a supervisory authority.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">8. Children’s privacy</h2>
+          <p>Sparkefy is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us information, contact us and we will take steps to delete it. Users must meet the age requirements in our Terms of Service (18+).</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">9. Security</h2>
+          <p>We use reasonable technical and organizational measures designed to protect personal information, including encrypted transport (HTTPS), access controls, and reputable infrastructure providers. No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">10. International transfers</h2>
+          <p>Sparkefy is operated from the United States. If you access the service from outside the U.S., your information may be processed in the United States and other countries where our processors operate. Those locations may have different data-protection laws than your home country.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">11. Changes to this policy</h2>
+          <p>We may update this Privacy Policy from time to time. We will post the revised policy on this page and update the “Last updated” date. For material changes, we may provide additional notice (for example, in-app notice or email when appropriate). Continued use of Sparkefy after changes become effective constitutes acceptance of the updated policy.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">12. Contact us</h2>
+          <p>For privacy questions, data requests, or concerns:</p>
+          <ul class="mt-3 space-y-1">
+            <li><strong class="text-slate-800 dark:text-slate-200">Email:</strong> <a href="mailto:sparkefysupport@gmail.com" class="text-brand font-medium hover:underline">sparkefysupport@gmail.com</a></li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Support page:</strong> <a href="support.html" class="text-brand font-medium hover:underline">sparkefy.app/support.html</a></li>
+            <li><strong class="text-slate-800 dark:text-slate-200">Website:</strong> <a href="https://sparkefy.app/" class="text-brand font-medium hover:underline">https://sparkefy.app/</a></li>
+          </ul>
+          <p class="mt-4 text-sm text-slate-500">This page is the Privacy Policy URL intended for App Store Connect and in-app legal links.</p>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2 text-white font-bold text-lg">
+            <img src="assets/logo.svg" alt="" width="32" height="32" class="w-8 h-8"> Sparkefy
+          </a>
+          <p class="mt-3 text-sm">On-demand home services marketplace.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Product</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html#services" class="hover:text-brand-200 transition">Services</a></li>
+            <li><a href="index.html#faqs" class="hover:text-brand-200 transition">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Legal</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy.html" class="hover:text-brand-200 transition">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-brand-200 transition">Terms of Service</a></li>
+            <li><a href="support.html" class="hover:text-brand-200 transition">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Contact</h3>
+          <a href="mailto:sparkefysupport@gmail.com" class="text-sm hover:text-brand-200 transition">sparkefysupport@gmail.com</a>
+        </div>
+      </div>
+      <p class="mt-10 pt-6 border-t border-slate-800 text-sm text-slate-500">© 2026 Sparkefy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function () {
+          var open = menu.classList.toggle('hidden') === false;
+          menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+      var themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          var dark = document.documentElement.classList.toggle('dark');
+          try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

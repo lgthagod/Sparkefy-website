@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support • Sparkefy</title>
+  <meta name="description" content="Get help with Sparkefy — bookings, payments, accounts, and provider tools. Email sparkefysupport@gmail.com. Official App Store support page.">
+  <meta name="theme-color" content="#0F766E">
+  <link rel="canonical" href="https://sparkefy.app/support.html">
+  <meta property="og:title" content="Sparkefy Support">
+  <meta property="og:description" content="Contact Sparkefy support for booking, payment, and account help.">
+  <meta property="og:url" content="https://sparkefy.app/support.html">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#0F766E', 50: '#F0FDFA', 100: '#CCFBF1', 200: '#99F6E4', 600: '#0D9488', 700: '#0F766E', 800: '#115E59', 900: '#134E4A' },
+            accent: { DEFAULT: '#F59E0B', 50: '#FFFBEB', 600: '#D97706', 700: '#B45309' },
+          },
+          boxShadow: {
+            soft: '0 10px 40px -12px rgba(15, 118, 110, 0.25)',
+            card: '0 4px 24px -4px rgba(15, 23, 42, 0.08)',
+            cta: '0 8px 24px -4px rgba(245, 158, 11, 0.45)',
+          },
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    [id] { scroll-margin-top: 5.5rem; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-300 font-sans antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+      <div class="flex h-16 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5 shrink-0 group" aria-label="Sparkefy home">
+          <img src="assets/logo.svg" alt="" width="36" height="36" class="w-9 h-9">
+          <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Sparkefy</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Home</a>
+          <a href="index.html#services" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Services</a>
+          <a href="index.html#how-it-works" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">How it Works</a>
+          <a href="index.html#testimonials" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Testimonials</a>
+          <a href="index.html#faqs" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">FAQs</a>
+          <a href="support.html" class="px-3 py-2 rounded-lg text-brand font-semibold bg-brand-50 dark:bg-slate-800 dark:text-brand-200 transition" aria-current="page">Support</a>
+          <a href="privacy.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Privacy</a>
+          <a href="terms.html" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-200 hover:bg-brand-50 dark:hover:bg-slate-800 transition">Terms</a>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button type="button" id="theme-toggle" class="p-2.5 rounded-xl text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-label="Toggle dark mode">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg>
+            <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+          </button>
+          <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-accent hover:bg-accent-600 text-white text-sm font-semibold px-4 py-2.5 shadow-cta transition hover:-translate-y-0.5">Download</a>
+          <button type="button" id="menu-btn" class="lg:hidden p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-slate-100 dark:border-slate-800 pt-3 space-y-1">
+        <a href="index.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Home</a>
+        <a href="index.html#services" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Services</a>
+        <a href="index.html#how-it-works" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">How it Works</a>
+        <a href="index.html#faqs" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">FAQs</a>
+        <a href="support.html" class="block px-3 py-3 rounded-lg font-medium text-brand bg-brand-50 dark:bg-slate-800 dark:text-brand-200" aria-current="page">Support</a>
+        <a href="privacy.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Privacy</a>
+        <a href="terms.html" class="block px-3 py-3 rounded-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800">Terms</a>
+        <a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="block mt-2 text-center rounded-xl bg-accent hover:bg-accent-600 text-white font-semibold px-4 py-3 shadow-cta">Download on the App Store</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-900 border-b border-slate-100 dark:border-slate-800">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <nav class="text-sm text-slate-500 mb-4" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2">
+            <li><a href="index.html" class="hover:text-brand transition">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-slate-900 dark:text-white font-medium">Support</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">Need help with Sparkefy?</h1>
+        <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">We’re here for booking issues, payments, account questions, provider tools, or feedback. This is the official support page listed in the App Store.</p>
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-8">
+      <!-- Primary contact -->
+      <section class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-8 shadow-card" aria-labelledby="contact-heading">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Email support</p>
+        <h2 id="contact-heading" class="text-xl font-semibold text-slate-900 dark:text-white mb-4">Contact us directly</h2>
+        <a href="mailto:sparkefysupport@gmail.com?subject=Sparkefy%20App%20Support" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-accent hover:bg-accent-600 text-white font-semibold text-base px-6 py-4 shadow-cta transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
+          Email sparkefysupport@gmail.com
+        </a>
+        <p class="mt-4 text-center sm:text-left">
+          <a href="mailto:sparkefysupport@gmail.com?subject=Sparkefy%20App%20Support" class="font-mono text-brand hover:underline">sparkefysupport@gmail.com</a>
+        </p>
+        <ul class="mt-4 space-y-1.5 text-sm text-slate-500 dark:text-slate-400">
+          <li>Replies usually within 24 hours</li>
+          <li>Include your username or booking ID for faster help</li>
+          <li>For technical issues, mention bundle ID: <code class="text-xs bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded">com.logangale.V3Sparkefy</code></li>
+        </ul>
+      </section>
+
+      <!-- FAQs -->
+      <section class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 sm:p-8 shadow-card" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="text-xl font-semibold text-slate-900 dark:text-white mb-6">Common questions</h2>
+        <div class="space-y-6 text-sm sm:text-base">
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">How do I cancel a booking?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">Open <strong>Bookings</strong> → tap your booking → <strong>Cancel this booking</strong>. You can also cancel from Live Tracking when available. Paid bookings are refunded automatically when possible via Stripe. New bookings are limited to a 30-day window.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Payment or refund questions?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">We use Stripe for checkout. A 20% platform fee is shown in the booking summary and on provider earnings screens (providers keep 80% of the service base; tips go 100% to the provider). Sparkefy does not store full card details.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Live tracking not working?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">Make sure location permission is enabled for Sparkefy. Tracking is available on supported jobs within the 30-day booking window. If it still fails, email us with your booking ID and device model.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">How do I become a provider or edit my showcase?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">In Profile, choose <strong>Become a Service Provider</strong>, then use <strong>Edit My Showcase &amp; Pricing</strong> to add cover photos, work samples, and price estimates.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Report a problem with a pro or customer?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">Email us with details and the booking ID. We review all reports and may follow up for more information.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Sign in with Apple or account issues?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">Try signing out and back in. If you used Sign in with Apple and hid your email, reply from the private relay address you registered with, or tell us the name and ZIP on the account. We can help restore access when possible.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Still need help?</h3>
+            <p class="mt-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">Just email <a href="mailto:sparkefysupport@gmail.com" class="text-brand font-medium hover:underline">sparkefysupport@gmail.com</a> — we’re happy to assist.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legal links -->
+      <section class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 p-6 sm:p-8">
+        <h2 class="text-lg font-semibold text-slate-900 dark:text-white mb-3">Legal &amp; policies</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">For full details on how we handle data and the rules of the platform:</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="privacy.html" class="inline-flex items-center rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-brand hover:bg-brand-50 dark:hover:bg-slate-700 transition">Privacy Policy</a>
+          <a href="terms.html" class="inline-flex items-center rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-brand hover:bg-brand-50 dark:hover:bg-slate-700 transition">Terms of Service</a>
+          <a href="index.html" class="inline-flex items-center rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition">Back to Home</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-flex items-center gap-2.5 text-white font-bold text-lg">
+            <img src="assets/logo.svg" alt="" width="32" height="32" class="w-8 h-8">
+            Sparkefy
+          </a>
+          <p class="mt-3 text-sm leading-relaxed">On-demand home services marketplace. Book trusted local pros — or earn as one — from your iPhone.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Product</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html#services" class="hover:text-brand-200 transition">Services</a></li>
+            <li><a href="index.html#how-it-works" class="hover:text-brand-200 transition">How it Works</a></li>
+            <li><a href="index.html#faqs" class="hover:text-brand-200 transition">FAQs</a></li>
+            <li><a href="https://apps.apple.com/app/id000000000" target="_blank" rel="noopener noreferrer" class="hover:text-brand-200 transition">App Store</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Legal</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy.html" class="hover:text-brand-200 transition">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-brand-200 transition">Terms of Service</a></li>
+            <li><a href="support.html" class="hover:text-brand-200 transition">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Contact</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:sparkefysupport@gmail.com" class="hover:text-brand-200 transition">sparkefysupport@gmail.com</a></li>
+            <li class="text-slate-500">Replies usually within 24 hours</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-500">
+        <p>© 2026 Sparkefy. All rights reserved.</p>
+        <p>Official App Store support page · Bundle ID: com.logangale.V3Sparkefy</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function () {
+          var open = menu.classList.toggle('hidden') === false;
+          menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+      }
+      var themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          var dark = document.documentElement.classList.toggle('dark');
+          try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
